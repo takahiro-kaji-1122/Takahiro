@@ -1,6 +1,7 @@
 # portfolio
 
-Hosting URL: https://portfolio-12283.web.app
+## portfolio url
+https://portfolio-12283.web.app
 
 ## Project setup
 ```
