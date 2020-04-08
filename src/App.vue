@@ -20,7 +20,8 @@ import mianSection from "./components/Main";
 export default {
   name: "App",
   components: {
-    Drawer
+    Drawer,
+    mianSection
   },
   data() {
     return {
@@ -33,12 +34,7 @@ export default {
     }
   }
 };
-export default {
-  name: 'App',
-  components: {
-    mianSection,
- }
-}
+
 
 </script>
 <style lang="scss">
