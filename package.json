@@ -58,7 +58,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/recommend",
+      "plugin:vue/recommended",
       "eslint:recommended"
     ],
     "parserOptions": {

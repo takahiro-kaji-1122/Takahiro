@@ -1,15 +1,38 @@
 <template>
   <div id="headerSection">
-    <img @click="toggle" class="btn btn-success" alt="メニュー" src="../assets/menu.png">
-<!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
-    <Drawer @close="toggle" align="left" :closeable="true">
-      <div v-if="open">me</div>
-      <div v-if="open">Home</div>
-      <div v-if="open">About Me</div>
-      <div v-if="open">Skill Sets</div>
-      <div v-if="open">Vision</div>
-      <div v-if="open"> Item 1</div>
-      <div v-if="open">Item 2</div>
+    <img
+      class="btn btn-success"
+      alt="メニュー"
+      src="../assets/menu.png"
+      @click="toggle"
+    >
+    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
+    <Drawer
+      align="left"
+      :closeable="true"
+      @close="toggle"
+    >
+      <div v-if="open">
+        me
+      </div>
+      <div v-if="open">
+        Home
+      </div>
+      <div v-if="open">
+        About Me
+      </div>
+      <div v-if="open">
+        Skill Sets
+      </div>
+      <div v-if="open">
+        Vision
+      </div>
+      <div v-if="open">
+        Item 1
+      </div>
+      <div v-if="open">
+        Item 2
+      </div>
     </Drawer>
   </div>
 </template>
@@ -36,7 +59,7 @@ export default {
 </script>
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
-"~bootstrap/scss/buttons";
+  "~bootstrap/scss/buttons";
 </style>
 <style>
 /* 元からあったドロワーボタンの装飾（一応残す）
@@ -52,7 +75,7 @@ export default {
 }
 */
 #headerSection {
-  background: #F3F3F3;
+  background: #f3f3f3;
   width: 100%;
   float: left;
 }
