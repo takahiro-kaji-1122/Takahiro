@@ -13,33 +13,40 @@
       @close="toggle"
     >
       <div v-if="open">
-        me
-      </div>
-      <div v-if="open">
-        Home
-      </div>
-      <div v-if="open">
-        About Me
-      </div>
-      <div v-if="open">
-        Skill Sets
-      </div>
-      <div v-if="open">
-        Vision
-      </div>
-      <div v-if="open">
-        Item 1
-      </div>
-      <div v-if="open">
-        Item 2
+        <ul>
+          <li>
+            <a
+              v-smooth-scroll
+              href="#Main"
+            >Main</a>
+          </li>
+          <li>
+            <a
+              v-smooth-scroll
+              href="#About"
+            >About</a>
+          </li>
+          <li>
+            <a
+              v-smooth-scroll
+              href="#Skill"
+            >Skill</a>
+          </li>
+          <li>
+            <a
+              v-smooth-scroll
+              href="#Vision"
+            >Vision</a>
+          </li>
+        </ul>
       </div>
     </Drawer>
   </div>
 </template>
- 
+
 <script>
 import Drawer from "vue-simple-drawer";
- 
+
 export default {
   name: "Drawer1",
   components: {
@@ -57,10 +64,12 @@ export default {
   }
 };
 </script>
+<!--ドロワーの装飾
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
   "~bootstrap/scss/buttons";
 </style>
+-->
 <style>
 /* 元からあったドロワーボタンの装飾（一応残す）
 #app {
