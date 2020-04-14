@@ -3,25 +3,28 @@
     <div id="Drawer">
       <Drawer />
     </div>
+    <br>
     <div id="Main">
       <Main />
     </div>
+    <br>
     <div id="About">
       <About />
     </div>
+    <br>
     <div id="Skill">
       <Skill />
     </div>
+    <br>
     <div id="Vision">
       <Vision />
     </div>
-    <div id="app">
-      <img
-        alt="Vue logo"
-        src="./assets/logo.png"
-      >
-      <HelloWorld msg="Welcome to Your Vue.js App" />
+    <br>
+    <div id="Footer">
+      <Footer />
+      <br>
     </div>
+    <br>
     <!-- test
     ボタン切り替え
       <div id="app">
@@ -32,23 +35,23 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Drawer from './components/Menu.vue'
 import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
+import Footer from './components/Footer.vue'
 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Drawer,
     Main,
     About,
     Skill,
     Vision,
+    Footer
   }
 }
 /*
@@ -65,6 +68,8 @@ var app = new Vue({
 </script>
 
 <style>
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

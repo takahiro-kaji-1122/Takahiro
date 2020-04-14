@@ -25,11 +25,13 @@ export default {
 #mainSection {
   width: 100%;
   text-align: center;
+  height: 100%;
   background-image: linear-gradient(#80e1f7, #06c1e6);
 }
 
 #userName {
   color: #fff;
+  height: 100%;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
@@ -44,7 +46,12 @@ export default {
   text-shadow: 2px 3px 9px #191314;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+#profilePicture {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: px solid #06c1e6;
+}
 
 </style>
 

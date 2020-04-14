@@ -1,7 +1,7 @@
 <template>
   <div id="headerSection">
     <img
-      class="btn btn-success"
+      class="headerButton"
       alt="メニュー"
       src="../assets/menu.png"
       @click="toggle"
@@ -87,5 +87,10 @@ export default {
   background: #f3f3f3;
   width: 100%;
   float: left;
+}
+
+.headerButton {
+  width: 40px;
+  height: 40px;
 }
 </style>
