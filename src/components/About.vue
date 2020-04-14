@@ -20,11 +20,13 @@ export default {
 <style scoped>
 .aboutSection {
   width: 100%;
+  height: 100%;
   text-align: center;
   background-image: #f5f5f5;
 }
 
 .aboutTitle {
+  height: 100%;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
@@ -33,6 +35,7 @@ export default {
 }
 
 .aboutExplain {
+  height: 100%;
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
