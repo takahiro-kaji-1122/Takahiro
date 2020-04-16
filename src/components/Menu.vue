@@ -1,12 +1,12 @@
 <template>
   <div id="headerSection">
+    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <img
       class="headerButton"
       alt="メニュー"
       src="../assets/menu.png"
       @click="toggle"
     >
-    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <Drawer
       class="drawerSection"
       align="left"
@@ -46,6 +46,20 @@
         </ul>
       </div>
     </Drawer>
+    <!--追加したドロワー-
+  <div id="drawer">
+    <div>
+      <button @click="openDrawerMenu('true')">ボタン</button>
+    </div>
+    <transition name="right">
+      <div v-if="drawerFlg" class="drawer-menu-wrapper">
+        <div class="drawer-menu">
+          <button @click="openDrawerMenu('false')">ボタン</button>
+          ここにメニューの内容を書いていく
+        </div>
+      </div>
+  </transition>
+  </div>追加したドロワー-->
   </div>
 </template>
 
@@ -67,6 +81,22 @@ export default {
       this.open = !this.open
     }
   }
+  /*追加したドロワー
+    data() {
+    return {
+      drawerFlg: false
+    };
+  },
+  computed: {
+
+    this.drawerFlg
+  },
+  methods: {
+    openDrawerMenu(newdrawer) {
+      this.drawerFlg = newdrawer;
+    }
+  }
+  追加したドロワー*/
 };
 </script>
 <!--ドロワーの装飾
@@ -92,12 +122,40 @@ export default {
   background: #f3f3f3;
   width: 100%;
   float: left;
+  padding: 10px 0;
 }
 
 .headerButton {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  padding: 0 0 0 10px;
 }
+
+/* 新たに追加したドロワー
+左から出したい場合
+.left-enter-active, .left-leave-active {
+  transform: translate(0px, 0px);
+  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+.left-enter, .left-leave-to {
+  transform: translateX(-100vw) translateX(0px);
+}
+
+以下、メニューの形に合わせて良い具合に変更してください
+.drawer-menu-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0; 右に出す場合
+  left: 0 ;左に出す場合
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+.drawer-menu {
+  padding: 24px;
+}
+新たに追加したドロワー */
 
 .drawerSection {
   color: #f3f3f3;
@@ -106,7 +164,8 @@ export default {
 }
 
 .drawerMenuSection {
-  color: #fff;
+  list-style: none;
+  background: #fff;
   width: 100%;
   height: auto;
 }
@@ -114,6 +173,15 @@ export default {
 .drawerMenuItem {
   color: #fff;
   width: 100%;
-  height: 50px;
+  height: 20px;
 }
+
+.drawerMenuItemLink {
+  color: #707070;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
 </style>

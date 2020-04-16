@@ -9,7 +9,7 @@
     <img
       id="profilePicture"
       alt="人"
-      src="../assets/man.png"
+      src="../assets/takahiro2.png"
     >
   </div>
 </template>
@@ -35,7 +35,8 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #191314;
+  text-shadow: 2px 3px 9px #3d4666;
+  padding: 50px 0 0 0;
 }
 
 #companyName {
@@ -43,15 +44,19 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #191314;
+  text-shadow: 2px 3px 9px #3d4666;
+  padding: 10px 0;
 }
 
 #profilePicture {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border: px solid #06c1e6;
+  padding: 5px 0 10px 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 </style>
 

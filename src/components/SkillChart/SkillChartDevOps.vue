@@ -31,9 +31,12 @@ export default {
           ticks: {
             suggestedMin:0,
             suggestedMax:100,
-            stepSize:10,
+            stepSize:20,
           }
-        }
+        },
+                legend: {
+            display: false,
+                }
       }
     }
   },
