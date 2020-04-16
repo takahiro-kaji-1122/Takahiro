@@ -3,7 +3,6 @@
     <div class="visionTitle">
       Vision
     </div>
-    <hr class="hr1">
     <div class="visionExplain">
       <p>互いの違いを楽しめる世界にしたいなと漠然と思っています。あまり具体性がないのですが、一番核になっているのはこの感覚です。その道の過程で、TeamTech Move the World.を実現させたいと思っています。</p>
       <p />
@@ -28,12 +27,16 @@ export default {
 }
 
 .visionTitle {
+  display: inline-block;
+  text-align: center;
   color: #20879f;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
+  width: 300px;
   font-weight: bold;
   text-shadow: 2px 3px 9px #3d4666;
   padding: 0 0 5px 0;
+  border-bottom: 2px solid #20879f;
 }
 
 .hr1 {

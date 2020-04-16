@@ -5,7 +5,7 @@
       class="headerButton"
       alt="メニュー"
       src="../assets/menu.png"
-      @click="toggle"
+      @click="toggle()"
     >
     <Drawer
       class="drawerSection"
@@ -79,6 +79,7 @@ export default {
   methods: {
     toggle() {
       this.open = !this.open
+
     }
   }
   /*追加したドロワー
@@ -105,7 +106,18 @@ export default {
   "~bootstrap/scss/buttons";
 </style>
 -->
-<style>
+<style >
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 300px;
+}
+
 /* 元からあったドロワーボタンの装飾（一応残す）
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -123,6 +135,7 @@ export default {
   width: 100%;
   float: left;
   padding: 10px 0;
+  position: fixed;
 }
 
 .headerButton {

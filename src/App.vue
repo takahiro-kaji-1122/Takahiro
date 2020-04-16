@@ -60,23 +60,12 @@ var app = new Vue({
 */
 </script>
 
-<style>
+<style scoped>
 
 
 #app {
   display: inline-block;
   text-align: center;
-}
-
-#banner-message {
-  background: #fff;
-  border-radius: 4px;
-  padding: 20px;
-  font-size: 25px;
-  text-align: center;
-  transition: all 0.2s;
-  margin: 0 auto;
-  width: 300px;
 }
 
 button {

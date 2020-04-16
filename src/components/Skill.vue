@@ -1,11 +1,15 @@
 <template>
   <div class="skillSection">
     <div class="skillTitle">
-      梶尚洋
+      Skill Set
     </div>
     <br>
     <div class="skillExplain">
-      seattleconslting
+      <p>
+        学生時代に、HPHとMySQLを少し触ったことがあります。動画をアップロードしたり、ログイン画面を作ったりしました。
+      </p>
+      <p>新卒研修ではVueなど色々なものを触り、自分がどれが好きなんだろうかと迷ったりしています。</p>
+      <p>今は、frontendを触るのが楽しいので色々調べてスキルアップしていきたいと思っています。</p>
     </div><br>
     <label class="gitHubLabel">Github : </label>
     <a
@@ -165,19 +169,24 @@ export default {
 }
 
 .skillTitle {
+  display: inline-block;
+  text-align: center;
   color: #20879f;
+  width: 300px;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
   text-shadow: 2px 3px 9px #3d4666;
+  border-bottom: 2px solid #20879f;
 }
 
 .skillExplain {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  word-break: keep-all;
-  line-height: 0.25em;
+  line-height: 1.4em;
+  word-break: normal;
+  padding: 8px 20px 5px 20px;
 }
 
 .gitHubLabel {

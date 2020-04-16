@@ -1,10 +1,10 @@
 <template>
   <div id="mainSection">
     <div id="userName">
-      梶尚洋
+      T.Kaji
     </div>
     <div id="companyName">
-      seattleconslting
+      Seattle conslting
     </div>
     <img
       id="profilePicture"
@@ -30,13 +30,17 @@ export default {
 }
 
 #userName {
+  display: inline-block;
+  text-align: center;
   color: #fff;
   height: 100%;
+  width: 300px;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18pt;
+  font-size: 20pt;
   font-weight: bold;
   text-shadow: 2px 3px 9px #3d4666;
-  padding: 50px 0 0 0;
+  padding: 50px 0 8px 0;
+  border-bottom: 2px solid #fff;
 }
 
 #companyName {
