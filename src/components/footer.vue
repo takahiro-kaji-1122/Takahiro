@@ -16,6 +16,7 @@
     <div class="footerCopyright">
       ©︎Seattleconsultig
     </div>
+    <br>
   </div>
 </template>
 

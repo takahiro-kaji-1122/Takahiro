@@ -8,33 +8,38 @@
     >
     <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <Drawer
+      class="drawerSection"
       align="left"
       :closeable="true"
       @close="toggle"
     >
       <div v-if="open">
-        <ul>
-          <li>
+        <ul class="drawerMenuSection">
+          <li class="drawerMenuItem">
             <a
               v-smooth-scroll
+              class="drawerMenuItemLink"
               href="#Main"
             >Main</a>
           </li>
-          <li>
+          <li class="drawerMenuItem">
             <a
               v-smooth-scroll
+              class="drawerMenuItemLink"
               href="#About"
             >About</a>
           </li>
-          <li>
+          <li class="drawerMenuItem">
             <a
               v-smooth-scroll
+              class="drawerMenuItemLink"
               href="#Skill"
             >Skill</a>
           </li>
-          <li>
+          <li class="drawerMenuItem">
             <a
               v-smooth-scroll
+              class="drawerMenuItemLink"
               href="#Vision"
             >Vision</a>
           </li>
@@ -92,5 +97,23 @@ export default {
 .headerButton {
   width: 40px;
   height: 40px;
+}
+
+.drawerSection {
+  color: #f3f3f3;
+  width: 100%;
+  height: auto;
+}
+
+.drawerMenuSection {
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.drawerMenuItem {
+  color: #fff;
+  width: 100%;
+  height: 50px;
 }
 </style>
