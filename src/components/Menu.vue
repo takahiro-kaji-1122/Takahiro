@@ -1,45 +1,61 @@
 <template>
   <div id="headerSection">
+    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <img
-      class="btn btn-success"
+      class="headerButton"
       alt="メニュー"
       src="../assets/menu.png"
-      @click="toggle"
+      @click="toggle()"
     >
-    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <Drawer
+      class="drawerSection"
       align="left"
       :closeable="true"
       @close="toggle"
     >
       <div v-if="open">
-        me
-      </div>
-      <div v-if="open">
-        Home
-      </div>
-      <div v-if="open">
-        About Me
-      </div>
-      <div v-if="open">
-        Skill Sets
-      </div>
-      <div v-if="open">
-        Vision
-      </div>
-      <div v-if="open">
-        Item 1
-      </div>
-      <div v-if="open">
-        Item 2
+        <ul class="drawerMenuSection">
+          <li class="drawerMenuItem">
+            <a
+              v-smooth-scroll
+              class="drawerMenuItemLink"
+              href="#Main"
+              @click="toggle()"
+            >Main</a>
+          </li>
+          <li class="drawerMenuItem">
+            <a
+              v-smooth-scroll
+              class="drawerMenuItemLink"
+              href="#About"
+              @click="toggle()"
+            >About</a>
+          </li>
+          <li class="drawerMenuItem">
+            <a
+              v-smooth-scroll
+              class="drawerMenuItemLink"
+              href="#Skill"
+              @click="toggle()"
+            >Skill</a>
+          </li>
+          <li class="drawerMenuItem">
+            <a
+              v-smooth-scroll
+              class="drawerMenuItemLink"
+              href="#Vision"
+              @click="toggle()"
+            >Vision</a>
+          </li>
+        </ul>
       </div>
     </Drawer>
   </div>
 </template>
- 
+
 <script>
 import Drawer from "vue-simple-drawer";
- 
+
 export default {
   name: "Drawer1",
   components: {
@@ -53,30 +69,68 @@ export default {
   methods: {
     toggle() {
       this.open = !this.open
+
     }
   }
 };
 </script>
+<!--ドロワーの装飾
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
   "~bootstrap/scss/buttons";
 </style>
-<style>
-/* 元からあったドロワーボタンの装飾（一応残す）
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+-->
+<style >
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
   text-align: center;
-  color: #2c3e50;
-  padding-top: 150px;
+  transition: all 0.2s;
   margin: 0 auto;
-  width: 800px;
+  width: 300px;
 }
-*/
+
 #headerSection {
   background: #f3f3f3;
   width: 100%;
   float: left;
+  padding: 10px 0;
+  position: fixed;
 }
+
+.headerButton {
+  width: 20px;
+  height: 20px;
+  padding: 0 0 0 10px;
+}
+
+.drawerSection {
+  color: #f3f3f3;
+  width: 100%;
+  height: auto;
+}
+
+.drawerMenuSection {
+  list-style: none;
+  background: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.drawerMenuItem {
+  color: #fff;
+  width: 100%;
+  height: 20px;
+}
+
+.drawerMenuItemLink {
+  color: #707070;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
 </style>
