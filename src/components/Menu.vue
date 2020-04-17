@@ -1,12 +1,12 @@
 <template>
   <div id="headerSection">
+    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <img
       class="headerButton"
       alt="メニュー"
       src="../assets/menu.png"
-      @click="toggle"
+      @click="toggle()"
     >
-    <!--    <button @click="toggle" class="btn btn-success">toggle</button> -->
     <Drawer
       class="drawerSection"
       align="left"
@@ -20,6 +20,7 @@
               v-smooth-scroll
               class="drawerMenuItemLink"
               href="#Main"
+              @click="toggle()"
             >Main</a>
           </li>
           <li class="drawerMenuItem">
@@ -27,6 +28,7 @@
               v-smooth-scroll
               class="drawerMenuItemLink"
               href="#About"
+              @click="toggle()"
             >About</a>
           </li>
           <li class="drawerMenuItem">
@@ -34,6 +36,7 @@
               v-smooth-scroll
               class="drawerMenuItemLink"
               href="#Skill"
+              @click="toggle()"
             >Skill</a>
           </li>
           <li class="drawerMenuItem">
@@ -41,6 +44,7 @@
               v-smooth-scroll
               class="drawerMenuItemLink"
               href="#Vision"
+              @click="toggle()"
             >Vision</a>
           </li>
         </ul>
@@ -65,6 +69,7 @@ export default {
   methods: {
     toggle() {
       this.open = !this.open
+
     }
   }
 };
@@ -75,28 +80,30 @@ export default {
   "~bootstrap/scss/buttons";
 </style>
 -->
-<style>
-/* 元からあったドロワーボタンの装飾（一応残す）
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style >
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
   text-align: center;
-  color: #2c3e50;
-  padding-top: 150px;
+  transition: all 0.2s;
   margin: 0 auto;
-  width: 800px;
+  width: 300px;
 }
-*/
+
 #headerSection {
   background: #f3f3f3;
   width: 100%;
   float: left;
+  padding: 10px 0;
+  position: fixed;
 }
 
 .headerButton {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
+  padding: 0 0 0 10px;
 }
 
 .drawerSection {
@@ -106,7 +113,8 @@ export default {
 }
 
 .drawerMenuSection {
-  color: #fff;
+  list-style: none;
+  background: #fff;
   width: 100%;
   height: auto;
 }
@@ -114,6 +122,15 @@ export default {
 .drawerMenuItem {
   color: #fff;
   width: 100%;
-  height: 50px;
+  height: 20px;
 }
+
+.drawerMenuItemLink {
+  color: #707070;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
 </style>

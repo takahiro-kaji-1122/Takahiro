@@ -1,13 +1,17 @@
 <template>
   <div class="skillSection">
     <div class="skillTitle">
-      梶尚洋
+      Skill Set
     </div>
     <br>
     <div class="skillExplain">
-      seattleconslting
+      <p>
+        学生時代に、HPHとMySQLを少し触ったことがあります。動画をアップロードしたり、ログイン画面を作ったりしました。
+      </p>
+      <p>新卒研修ではVueなど色々なものを触り、自分がどれが好きなんだろうかと迷ったりしています。</p>
+      <p>今は、frontendを触るのが楽しいので色々調べてスキルアップしていきたいと思っています。</p>
     </div><br>
-    <label class="gitHubLabel">Github</label>
+    <label class="gitHubLabel">Github : </label>
     <a
       class="gitHubLink"
       href="https://github.com/takahiro-kaji-1122/portfolio"
@@ -17,71 +21,79 @@
     <br><br>
 
     <a
-      href="#"
+      href="#!"
       class="skillCategoriesFrontend"
+      :class="{ onskillCategoriesFrontend: isFrontActive }"
       @click="setCurrentChart('Frontend')"
     >
       Frontend
     </a>
     <a
-      href="#"
+      href="#!"
       class="skillCategoriesBackend"
+      :class="{ onskillCategoriesBackend: isBackActive }"
       @click="setCurrentChart('Backend')"
     >
       Backend
     </a>
     <a
-      href="#"
+      href="#!"
       class="skillCategoriesDevOps"
+      :class="{ onskillCategoriesDevOps: isDevOpsActive }"
       @click="setCurrentChart('DevOps')"
     >
       DevOps
     </a>
     <br>
     <div>
-      <div>
-        <div
-          class="offFrontend"
-          :class="{ onFrontend: isFrontendActive }"
-        >
-          <SkillFrontend />
-        </div>
-        <div
-          class="offBackend"
-          :class="{ onBackend: isBackActive }"
-        >
-          <lu class="skillListBackend">
-            <li>Java</li>
-            <li>Ruby</li>
-            <li>RubyOnRails</li>
-            <li>MySQL</li>
-          </lu>
-        </div>
-        <div
-          class="offDevOps"
-          :class="{ onDevOps: isDevOpsActive }"
-        >
-          <div id="DevOps">
-            <div class="skillListDevOps">
-              <span class="skillDevOps">Linux</span>
-              <span class="skillDevOps">Node</span>
-              <span class="skillDevOps">Git</span>
-              <span class="skillDevOps">GitHub</span>
-              <span class="skillDevOps">Firebase</span>
-            </div>
-          </div>
-        </div>
+      <lu
+        class="offFrontend"
+        :class="{ onFrontend: isFrontActive }"
+      >
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>SCSS</li>
+        <li>Vue</li>
+      </lu><br>
+      <lu
+        class="offBackend"
+        :class="{ onBackend: isBackActive }"
+      >
+        <li>Java</li>
+        <li>Ruby</li>
+        <li>RubyOnRails</li>
+        <li>MySQL</li>
+      </lu><br>
+      <lu
+        class="offDevOps"
+        :class="{ onDevOps: isDevOpsActive }"
+      >
+        <li>Linux</li>
+        <li>Node</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Firebase</li>
+      </lu>
+    </div>
+    <div class="skillGraph">
+      <div
+        v-if="isFrontActive"
+        class="skillGraph"
+      >
+        <SkillChartFrontend />
       </div>
-      <div class="skillGraph">
-        <div v-if="isFrontActive">
-          <SkillChartFrontend />
-        </div>
-        <div v-if="isBackActive">
-          <SkillChartBackend />
-        </div>
-        <div v-if="isDevOpsActive">
-          <SkillChartDevOps />
-        </div>
+      <div
+        v-if="isBackActive"
+        class="skillGraph"
+      >
+        <SkillChartBackend />
+      </div>
+      <div
+        v-if="isDevOpsActive"
+        class="skillGraph"
+      >
+        <SkillChartDevOps />
       </div>
     </div><!--試し-->
   </div>
@@ -91,7 +103,6 @@
 import SkillChartFrontend from './SkillChart/SkillChartFrontend.vue'
 import SkillChartBackend from './SkillChart/SkillChartBackend.vue'
 import SkillChartDevOps from './SkillChart/SkillChartDevOps.vue'
-import SkillFrontend from './SkillList/SkillFrontend.vue'
 
 
 export default {
@@ -100,7 +111,6 @@ export default {
     SkillChartFrontend,
     SkillChartBackend,
     SkillChartDevOps,
-    SkillFrontend,
   },
   data () {
     return {
@@ -150,26 +160,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .skillSection {
+  display: inline-block;
   text-align: center;
   background: #fff;
   width: 100%;
   height: 100%;
+  padding: 10px 0;
 }
 
 .skillTitle {
+  display: inline-block;
+  text-align: center;
   color: #20879f;
+  width: 300px;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #191314;
+  text-shadow: 2px 3px 9px #3d4666;
+  border-bottom: 2px solid #20879f;
 }
 
 .skillExplain {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  word-break: keep-all;
-  line-height: 0.25em;
+  line-height: 1.4em;
+  word-break: normal;
+  padding: 8px 20px 5px 20px;
 }
 
 .gitHubLabel {
@@ -187,72 +204,98 @@ export default {
 .skillCategoriesFrontend {
   color: #b51a1a;
   opacity: 0.75;
+  text-decoration: none;
+}
+
+.onskillCategoriesFrontend {
+  text-decoration: underline;
 }
 
 .skillCategoriesBackend {
   color: #0f8839;
   opacity: 0.75;
+  text-decoration: none;
+}
+
+.onskillCategoriesBackend {
+  text-decoration: underline;
 }
 
 .skillCategoriesDevOps {
   color: #571083;
   opacity: 0.75;
+  text-decoration: none;
 }
 
-.offFrontend {
-  opacity: 0.85;
-  display: inline-block;
-  height: 30px;
-  border-radius: 20%;
+.onskillCategoriesDevOps {
+  text-decoration: underline;
 }
 
-/* .skillListBackend {
-  color: rgba(15, 136, 57, 0.25);
-  background: #0f8839;
+.offFrontend li {
   display: inline-block;
-  height: 30px;
-  border-radius: 20%;
-} */
-
-.skillListDevOps {
-  color: rgba(87, 16, 131, 0.25);
-  background: #571083;
-  opacity: 0.25;
-  display: inline-block;
-  height: 30px;
-  border-radius: 20%;
+  color: rgba(181, 26, 26, 0.25);
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 1px gray;
+  margin: 12px 5px 6px 5px;
 }
 
-.skillFrontend {
-  background: rgba(241, 6, 6, 0.25);
-  margin: 10px;
+.onFrontend li {
   color: rgba(241, 6, 6, 0.75);
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  background: rgba(241, 6, 6, 0.25);
+  box-shadow: 0 0 6px gray;
+  margin: 12px 5px 6px 5px;
 }
 
-.skillListBackend li {
-  display: inline;
+.offBackend li {
+  display: inline-block;
   color: rgba(15, 136, 57, 0.25);
   padding: 5px 10px 5px 10px;
   font-weight: bold;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 1px gray;
+  margin: 6px 5px;
+}
+
+.onBackend li {
+  color: rgba(15, 136, 57, 0.75);
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
   background: rgba(15, 136, 57, 0.25);
-  box-shadow: 0 0 8px gray;
-  margin: 5px;
+  box-shadow: 0 0 6px gray;
+  margin: 6px 5px;
 }
 
-#SkilChartFrontend {
-  width: 200px;
-  height: 2000px;
+.offDevOps li {
+  display: inline-block;
+  color: rgba(87, 16, 131, 0.25);
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 1px gray;
+  margin: 6px 5px;
 }
 
-#SkilChartBackend {
-  width: 200px;
-  height: 200px;
+.onDevOps li {
+  color: rgba(87, 16, 131, 0.75);
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  background: rgba(87, 16, 131, 0.25);
+  box-shadow: 0 0 6px gray;
+  margin: 6px 5px;
 }
 
-#SkilChartDevOps {
-  width: 200px;
-  height: 200px;
+.skillGraph {
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+  height: 300px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 </style>
 

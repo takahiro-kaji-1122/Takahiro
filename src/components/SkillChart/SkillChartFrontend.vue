@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Frontend',
-            data: [30, 20, 30, 40, 50],
+            data: [40, 60, 60, 40, 90],
             backgroundColor: [
               'rgba(241, 6, 6, 0.25)',
             ],
@@ -33,9 +33,13 @@ export default {
           ticks: {
             suggestedMin:0,
             suggestedMax:100,
-            stepSize:10,
+            stepSize:20,
           }
-        }
+        },
+                        legend: {
+            display: false,
+                }
+
       }
     }
   },

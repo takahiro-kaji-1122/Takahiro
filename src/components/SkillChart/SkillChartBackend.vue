@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Backend',
-            data: [30, 50, 30, 40],
+            data: [20, 70, 60, 80],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
             ],
@@ -32,8 +32,11 @@ export default {
           ticks: {
             suggestedMin:0,
             suggestedMax:100,
-            stepSize:10,
+            stepSize:20,
           }
+        },
+        legend: {
+            display: false,
         }
       }
     }

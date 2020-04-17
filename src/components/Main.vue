@@ -1,15 +1,15 @@
 <template>
   <div id="mainSection">
     <div id="userName">
-      梶尚洋
+      T.Kaji
     </div>
     <div id="companyName">
-      seattleconslting
+      Seattle conslting
     </div>
     <img
       id="profilePicture"
       alt="人"
-      src="../assets/man.png"
+      src="../assets/takahiro2.png"
     >
   </div>
 </template>
@@ -30,12 +30,17 @@ export default {
 }
 
 #userName {
+  display: inline-block;
+  text-align: center;
   color: #fff;
   height: 100%;
+  width: 300px;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 18pt;
+  font-size: 20pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #191314;
+  text-shadow: 2px 3px 9px #3d4666;
+  padding: 50px 0 8px 0;
+  border-bottom: 2px solid #fff;
 }
 
 #companyName {
@@ -43,15 +48,19 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #191314;
+  text-shadow: 2px 3px 9px #3d4666;
+  padding: 10px 0;
 }
 
 #profilePicture {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border: px solid #06c1e6;
+  padding: 5px 0 10px 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
 </style>
 

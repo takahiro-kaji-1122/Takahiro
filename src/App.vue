@@ -1,30 +1,23 @@
 <template>
-  <div>
+  <div class="app">
     <div id="Drawer">
       <Drawer />
     </div>
-    <br>
     <div id="Main">
       <Main />
     </div>
-    <br>
     <div id="About">
       <About />
     </div>
-    <br>
     <div id="Skill">
       <Skill />
     </div>
-    <br>
     <div id="Vision">
       <Vision />
     </div>
-    <br>
     <div id="Footer">
       <Footer />
-      <br>
     </div>
-    <br>
     <!-- test
     ボタン切り替え
       <div id="app">
@@ -67,27 +60,12 @@ var app = new Vue({
 */
 </script>
 
-<style>
+<style scoped>
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-#banner-message {
-  background: #fff;
-  border-radius: 4px;
-  padding: 20px;
-  font-size: 25px;
-  text-align: center;
-  transition: all 0.2s;
-  margin: 0 auto;
-  width: 300px;
 }
 
 button {

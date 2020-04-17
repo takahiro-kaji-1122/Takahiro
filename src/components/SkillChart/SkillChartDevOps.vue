@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'DevOps',
-            data: [30, 20, 30, 40, 50],
+            data: [20, 20, 80, 80, 40],
             backgroundColor: [
               'rgba(87, 16, 131, 0.25)',
             ],
@@ -31,9 +31,12 @@ export default {
           ticks: {
             suggestedMin:0,
             suggestedMax:100,
-            stepSize:10,
+            stepSize:20,
           }
-        }
+        },
+                legend: {
+            display: false,
+                }
       }
     }
   },

@@ -10,7 +10,7 @@
       <img
         id="footerScroll"
         alt="top"
-        src="../assets/up.png"
+        src="../assets/up3.png"
       >
     </a>
     <div class="footerCopyright">
@@ -21,7 +21,7 @@
 </template>
 
 ,
-<script>
+<script scoped>
 export default {
   name: "Footer"
 }
@@ -33,6 +33,7 @@ export default {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(#80e1f7, #06c1e6);
+  padding: 10px 0;
 }
 
 #footerScroll {
@@ -40,7 +41,8 @@ export default {
   width: 40px;
   height: 40px;
   background-size: cover;
-  border: px solid #80e1f7;
+  border: 3px solid #80e1f7;
+  background-color: #fff;
 }
 
 .footerCopyright {
@@ -49,5 +51,9 @@ export default {
   font-size: 12pt;
   line-height: 0.25em;
   word-break: keep-all;
+  padding: 10px 0 0 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
 </style>
