@@ -117,12 +117,13 @@ export default {
   background: #fff;
   width: 100%;
   height: auto;
+  padding: 20px 20px 0 20px;
 }
 
 .drawerMenuItem {
   color: #fff;
   width: 100%;
-  height: 20px;
+  height: 40px;
 }
 
 .drawerMenuItemLink {
@@ -132,5 +133,10 @@ export default {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+.vue-simple-drawer {
+  padding: 100px 0 100px 60px !important;
+  background-color: #f3f3f3 !important;
+}
 
 </style>
