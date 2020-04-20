@@ -26,24 +26,21 @@
       :class="{ onskillCategoriesFrontend: isFrontActive }"
       @click="setCurrentChart('Frontend')"
     >
-      Frontend
-    </a>
+      Frontend</a>
     <a
       href="#!"
       class="skillCategoriesBackend"
       :class="{ onskillCategoriesBackend: isBackActive }"
       @click="setCurrentChart('Backend')"
     >
-      Backend
-    </a>
+      Backend</a>
     <a
       href="#!"
       class="skillCategoriesDevOps"
       :class="{ onskillCategoriesDevOps: isDevOpsActive }"
       @click="setCurrentChart('DevOps')"
     >
-      DevOps
-    </a>
+      DevOps</a>
     <br>
     <div>
       <lu
@@ -176,7 +173,7 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #3d4666;
+  text-shadow: 2px 2px 2px #3c40506b;
   border-bottom: 2px solid #20879f;
 }
 
@@ -205,6 +202,7 @@ export default {
   color: #b51a1a;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesFrontend {
@@ -215,6 +213,7 @@ export default {
   color: #0f8839;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesBackend {
@@ -225,6 +224,7 @@ export default {
   color: #571083;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesDevOps {

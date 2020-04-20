@@ -38,7 +38,7 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 20pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #3d4666;
+  text-shadow: 2px 2px 2px #3c40506b;
   padding: 50px 0 8px 0;
   border-bottom: 2px solid #fff;
 }
@@ -56,7 +56,6 @@ export default {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  border: px solid #06c1e6;
   padding: 5px 0 10px 0;
 }
 
