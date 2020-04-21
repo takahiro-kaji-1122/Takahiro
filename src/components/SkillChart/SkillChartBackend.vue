@@ -22,8 +22,6 @@ export default {
               'rgba(15, 136, 57, 0.75)',
               ],
             borderWidth: 1
-
-
           },
         ]
       },
