@@ -3,7 +3,7 @@
     <div id="Drawer">
       <Drawer />
     </div>
-    <div>{{ this.skills }}</div>
+    <!--<div>{{ this.skills }}</div>-->
     <div id="Main">
       <Main />
     </div>
@@ -16,9 +16,9 @@
     <div id="Vision">
       <Vision />
     </div>
-    <div id="Footer">
+    <!--一回フッター無効化    <div id="Footer">
       <Footer />
-    </div>
+    </div>-->
     <!-- test
     ボタン切り替え
       <div id="app">
@@ -34,7 +34,7 @@ import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
-import Footer from './components/Footer.vue'
+//import Footer from './components/Footer.vue'
 
 
 export default {
@@ -45,9 +45,9 @@ export default {
     About,
     Skill,
     Vision,
-    Footer
+//    Footer
   },
-  data() {
+/*data() {
     return {
       skills: []
     }
@@ -75,7 +75,7 @@ export default {
         console.log(items)
     }
   }
-
+*/
 }
 
 
