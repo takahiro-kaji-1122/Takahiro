@@ -1,66 +1,65 @@
 {
-  "skills":{
-    "Frontend" : {
-      "HTML" : {
-        "name" : "HTML",
-        "score" : 40
+  "skills": [{
+      "category":"front-end",
+      "skills":[{
+          "name":"HTML",
+          "score": 30
       },
-      "CSS" : {
-        "name" : "CSS",
-        "score" : 60
+      {
+          "name": "CSS",
+          "score": 30
       },
-      "JavaScript" : {
-        "name" : "JavaScript",
-        "score" : 60
+      {
+          "name": "JavaScript",
+          "score": 20
       },
-      "SCSS" : {
-        "name" : "SCSS",
-        "score" : 40
+      {
+          "name": "SCSS",
+          "score": 20
       },
-      "Vue" : {
-        "name" : "Vue",
-        "score" : 90
-      }
-    },
-    "Backend":{
-      "Java" : {
-        "name" : "java",
-        "score" : 20
+      {
+          "name": "Vue",
+          "score": 20
+      }]},
+      {
+      "category": "back-end",
+      "skills":[{
+          "name": "Java",
+          "score": 10
       },
-      "Ruby" : {
-        "name" : "Ruby",
-        "score" : 70
+      {
+          "name": "Ruby",
+          "score": 20
       },
-      "RubyOnRails" : {
-        "name" : "RubyOnRails",
-        "score" : 60
+      {
+          "name": "RubyOnRails",
+          "score": 40
       },
-      "MySQL" : {
-        "name" : "MySQL",
-        "score" : 80
-      }
-    },
-    "DevOps":{
-      "Java" : {
-        "name" : "Linux",
-        "score" : 20
+      {
+          "name": "MySQL",
+          "score": 10
+      }]},
+  {
+  "category": "devops",
+  "skills":[{
+          "name": "Lenux",
+          "score": 30
       },
-      "Node" : {
-        "name" : "Node",
-        "score" : 20
+      {
+          "name": "Node",
+          "score": 10
       },
-      "Gir" : {
-        "name" : "Git",
-        "score" : 80
+      {
+          "name": "Git",
+          "score": 40
       },
-      "GitHub" : {
-        "name" : "GitHub",
-        "score" : 80
+      {
+          "name": "GitHub",
+          "score": 30
       },
-      "Firebase" : {
-        "name" : "Furebase",
-        "score" : 40
-      }
-    }
+      {
+          "name": "Firebase",
+          "score": 20
+      }]}
+      ]
   }
-}

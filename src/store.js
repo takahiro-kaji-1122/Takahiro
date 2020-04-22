@@ -8,12 +8,63 @@ Vue.use(Vuex) //vuexが読み込まれている
 export default new Vuex.Store({ //ここに実装を書く
   state: {
     skillScores: [],
+    loaded: false
   },
+  // getters: {
+  //   getSkillScores(state){
+  //     const backScoreAllay = []
+  //       state.skillScores[0].skills.forEach((backScore) => {
+  //       backScoreAllay.push(backScore.score);
+  //     })
+  //     return backScoreAllay
+  //   }
+  // },
   getters: {
-    getSkillScores(state){
-      return state.skillScores
+    frontScore(state){
+      const frontScoreAllay=[]
+      state.skillScores[0].skills.forEach((skillInfo1)=>{
+        frontScoreAllay.push(skillInfo1.score)
+      })
+      return frontScoreAllay
+    },
+    backScore(state){
+      const backScoreAllay=[]
+      state.skillScores[1].skills.forEach((skillInfo2)=>{
+        backScoreAllay.push(skillInfo2.score)
+      })
+      return backScoreAllay
+    },
+    devScore(state){
+      const devScoreAllay=[]
+      state.skillScores[2].skills.forEach((skillInfo3)=>{
+        devScoreAllay.push(skillInfo3.score)
+      })
+      return devScoreAllay
+    },
+    frontName(state){
+      const frontNameAllay=[]
+      state.skillScores[0].skills.forEach((skillInfo4)=>{
+        frontNameAllay.push(skillInfo4.name)
+      })
+      return frontNameAllay
+    },
+    backName(state){
+      const backNameAllay=[]
+      state.skillScores[1].skills.forEach((skillInfo5)=>{
+        backNameAllay.push(skillInfo5.name)
+      })
+      return backNameAllay
+    },
+    devName(state){
+      const devNameAllay=[]
+      state.skillScores[2].skills.forEach((skillInfo6)=>{
+        devNameAllay.push(skillInfo6.name)
+      })
+      return devNameAllay
     }
+
   },
+
   mutations: {
     //参考：https://vuex.vuejs.org/ja/guide/mutations.html
     setSkillScores (state, payload){
@@ -21,6 +72,8 @@ export default new Vuex.Store({ //ここに実装を書く
     //参考
     //setMonths(state, payload) {
     //state.months = payload.months}
+    state.loaded = true
+
     },
   },
   actions: {

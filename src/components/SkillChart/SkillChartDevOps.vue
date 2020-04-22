@@ -40,17 +40,24 @@ export default {
       }
     }
   },
-    computed:{
-    score(){
-      return this.$store.getters.getSkillScores[0].Java.name
-    }
+  mounted(){
+    this.getDSkillScores()
+    this.getDSkillName()
+    this.renderChart(this.data, this.options)
+      // this.$store.dispatch('updateSkillScores');
+      // this.$store.getters.getSkillScores[0].Java.name
   },
-  mounted () {
-    this.renderChart(this.data, this.options);
-    this.$store.dispatch('updateSkillScores');
-//    console.log($store.state.skillScores);
-    const Java = this.$store.getters.getSkillScores[0].Java.name;
-      console.log(Java)
+  methods:{
+    // storeからscore
+    getDSkillScores(){
+      const skillDScore=this.$store.getters.devScore
+      this.data.datasets[0].data=skillDScore
+    },
+    // storeからname
+    getDSkillName(){
+      const skillDName=this.$store.getters.devName
+      this.data.labels=skillDName
+    }
   }
 }
 </script>

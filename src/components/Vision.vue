@@ -8,16 +8,11 @@
       <p />
       <p>どう実現させていくのかは、シアトルがどう成長していくかにかかっていると感じているので、その中でシアトルのValueを体現できるように頑張っていきたいと思っています。</p>
     </div>
-    <div>{{ score1 }}</div>
-    <div>{{ score2 }}</div>
+    <!-- <div>{{ score }}</div>
     <input
       type="checkbox"
-      @click="getScore1"
-    >
-    <input
-      type="checkbox"
-      @click="getScore2"
-    >
+      @click="getScore()"
+    > -->
   </div>
 </template>
 
@@ -25,23 +20,17 @@
 export default {
   name: "Vision",
   computed:{
-    score1(){
-      return this.$store.getters.getSkillScores[0]
-    },
-    score2(){
-      return this.$store.getters.getSkillScores[1]
-    }
+    // score(){
+    //   return this.$store.getters.getSkillScores
+    // }
   },
-  methods:{
-    getScore1(){
-    this.$store.dispatch('updateSkillScores');
-//    console.log($store.state.skillScores);
-    },
-        getScore2(){
-    this.$store.dispatch('updateSkillScores');
-//    console.log($store.state.skillScores);
-    },
-  }
+//    mounted(){
+//     // getScore(){
+//    this.$store.dispatch('updateSkillScores');
+// //    console.log($store.state.skillScores);
+//     // await console.log(this.$store.getters.getSkillScores)
+//     // },
+//   }
 }
 
 </script>
