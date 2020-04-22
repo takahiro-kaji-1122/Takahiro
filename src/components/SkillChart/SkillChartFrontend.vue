@@ -7,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'JavaScript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Frontend',
-            data: [40, 60, 60, 40, 90],
+            data: [],
             backgroundColor: [
               'rgba(241, 6, 6, 0.25)',
             ],
@@ -43,8 +43,34 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted(){
+    this.getFSkillScores()
+    this.getFSkillName()
     this.renderChart(this.data, this.options)
+      // this.$store.dispatch('updateSkillScores');
+      // this.$store.getters.getSkillScores[0].Java.name
+  },
+  methods:{
+    // storeからscore
+    getFSkillScores(){
+      const skillFScore=this.$store.getters.frontScore
+      this.data.datasets[0].data=skillFScore
+    },
+    // storeからname
+    getFSkillName(){
+      const skillFName=this.$store.getters.frontName
+      this.data.labels=skillFName
+    }
   }
+
+//   methods :{
+//     getbackScores(){
+//       const backScores = this.$getters.getSkillScores
+//     this.data.labels = backScores
+// //    console.log($store.state.skillScores);
+//     // const Java = this.$store.getters.getSkillScores[0].Java.name;
+//       // console.log(this.$store.getters.getSkillScores[0])
+//     }
+//   }
 }
 </script>

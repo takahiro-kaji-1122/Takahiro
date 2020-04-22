@@ -43,7 +43,7 @@
       DevOps</a>
     <br>
     <div>
-      <lu
+      <ul
         class="offFrontend"
         :class="{ onFrontend: isFrontActive }"
       >
@@ -52,8 +52,8 @@
         <li>JavaScript</li>
         <li>SCSS</li>
         <li>Vue</li>
-      </lu><br>
-      <lu
+      </ul><br>
+      <ul
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
@@ -61,8 +61,8 @@
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
-      </lu><br>
-      <lu
+      </ul><br>
+      <ul
         class="offDevOps"
         :class="{ onDevOps: isDevOpsActive }"
       >
@@ -71,11 +71,11 @@
         <li>Git</li>
         <li>GitHub</li>
         <li>Firebase</li>
-      </lu>
+      </ul>
     </div>
     <div class="skillGraph">
       <div
-        v-if="isFrontActive"
+        v-if="isFrontActive && loaded"
         class="skillGraph"
       >
         <SkillChartFrontend />
@@ -123,6 +123,9 @@ export default {
     },
     isDevOpsActive() {
       return this.currentChart=='DevOps';
+    },
+    loaded(){
+      return this.$store.state.loaded
     }
   },
   methods: {

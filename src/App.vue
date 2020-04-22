@@ -47,6 +47,9 @@ export default {
     Vision,
 //    Footer
   },
+  mounted(){
+    this.$store.dispatch('updateSkillScores');
+  },
 /*data() {
     return {
       skills: []
