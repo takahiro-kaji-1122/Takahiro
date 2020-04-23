@@ -16,9 +16,9 @@
     <div id="Vision">
       <Vision />
     </div>
-    <!--一回フッター無効化    <div id="Footer">
+    <!-- <div id="Footer">
       <Footer />
-    </div>-->
+    </div> -->
     <!-- test
     ボタン切り替え
       <div id="app">
@@ -34,7 +34,7 @@ import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
-//import Footer from './components/Footer.vue'
+// import Footer from './components/Footer.vue'
 
 
 export default {
@@ -44,8 +44,8 @@ export default {
     Main,
     About,
     Skill,
-    Vision,
-//    Footer
+    Vision
+    // Footer
   },
   mounted(){
     this.$store.dispatch('updateSkillScores');

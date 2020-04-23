@@ -58,3 +58,4 @@ if [ $1 = "production" ] || [ $1 = "both" ]; then
   firebase deploy
   # cache一応戻しておく
   git checkout .firebase/hosting.ZGlzdA.cache
+fi
