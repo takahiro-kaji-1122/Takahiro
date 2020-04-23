@@ -4,10 +4,12 @@
   >
     <!--https://cleysense.com/blog/smooth-scroll-with-vuejs/-->
     <a
+      v-smooth-scroll
       href="#Main"
     >
       <img
         id="footerScroll"
+        v-smooth-scroll="{ duration: 2000, offset: 0 }"
         alt="top"
         src="../assets/up3.png"
         @click="handleScroll()"
@@ -23,8 +25,7 @@
 ,
 <script scoped>
 export default {
-  name: "Footer"
-}
+  name: "Footer",
 /*aaa  data(){
     visible = 'false' // 表示・非表示判定を格納
   },
@@ -34,7 +35,7 @@ export default {
       this.visible = window.pageYOffset > 150;
     }
   }*/
-
+}
 </script>
 
 <style scoped>
