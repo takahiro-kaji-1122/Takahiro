@@ -26,6 +26,7 @@
 <script scoped>
 export default {
   name: "Footer",
+}
 /*aaa  data(){
     visible = 'false' // 表示・非表示判定を格納
   },
@@ -35,7 +36,7 @@ export default {
       this.visible = window.pageYOffset > 150;
     }
   }*/
-}
+
 </script>
 
 <style scoped>
