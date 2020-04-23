@@ -25,7 +25,7 @@
 ,
 <script scoped>
 export default {
-  name: "Footer",
+  name: "Footer"
 }
 /*aaa  data(){
     visible = 'false' // 表示・非表示判定を格納
