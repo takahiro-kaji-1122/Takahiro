@@ -94,8 +94,6 @@ var app = new Vue({
 })
 ↑test
 */
-
-
 </script>
 
 <style scoped>
