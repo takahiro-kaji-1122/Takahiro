@@ -26,27 +26,24 @@
       :class="{ onskillCategoriesFrontend: isFrontActive }"
       @click="setCurrentChart('Frontend')"
     >
-      Frontend
-    </a>
+      Frontend</a>
     <a
       href="#!"
       class="skillCategoriesBackend"
       :class="{ onskillCategoriesBackend: isBackActive }"
       @click="setCurrentChart('Backend')"
     >
-      Backend
-    </a>
+      Backend</a>
     <a
       href="#!"
       class="skillCategoriesDevOps"
       :class="{ onskillCategoriesDevOps: isDevOpsActive }"
       @click="setCurrentChart('DevOps')"
     >
-      DevOps
-    </a>
+      DevOps</a>
     <br>
     <div>
-      <lu
+      <ul
         class="offFrontend"
         :class="{ onFrontend: isFrontActive }"
       >
@@ -55,8 +52,8 @@
         <li>JavaScript</li>
         <li>SCSS</li>
         <li>Vue</li>
-      </lu><br>
-      <lu
+      </ul><br>
+      <ul
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
@@ -64,8 +61,8 @@
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
-      </lu><br>
-      <lu
+      </ul><br>
+      <ul
         class="offDevOps"
         :class="{ onDevOps: isDevOpsActive }"
       >
@@ -74,11 +71,11 @@
         <li>Git</li>
         <li>GitHub</li>
         <li>Firebase</li>
-      </lu>
+      </ul>
     </div>
     <div class="skillGraph">
       <div
-        v-if="isFrontActive"
+        v-if="isFrontActive && loaded"
         class="skillGraph"
       >
         <SkillChartFrontend />
@@ -126,6 +123,9 @@ export default {
     },
     isDevOpsActive() {
       return this.currentChart=='DevOps';
+    },
+    loaded(){
+      return this.$store.state.loaded
     }
   },
   methods: {
@@ -176,7 +176,7 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #3d4666;
+  text-shadow: 2px 2px 2px #3c40506b;
   border-bottom: 2px solid #20879f;
 }
 
@@ -205,6 +205,7 @@ export default {
   color: #b51a1a;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesFrontend {
@@ -215,6 +216,7 @@ export default {
   color: #0f8839;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesBackend {
@@ -225,6 +227,7 @@ export default {
   color: #571083;
   opacity: 0.75;
   text-decoration: none;
+  margin: 0 3px;
 }
 
 .onskillCategoriesDevOps {

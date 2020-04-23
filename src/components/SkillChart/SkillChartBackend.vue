@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Backend',
-            data: [20, 70, 60, 80],
+            data: [],
             backgroundColor: [
               'rgba(15, 136, 57, 0.25)',
             ],
@@ -22,8 +22,6 @@ export default {
               'rgba(15, 136, 57, 0.75)',
               ],
             borderWidth: 1
-
-
           },
         ]
       },
@@ -41,8 +39,43 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted(){
+    this.getBSkillScores()
+    this.getBSkillName()
     this.renderChart(this.data, this.options)
+      // this.$store.dispatch('updateSkillScores');
+      // this.$store.getters.getSkillScores[0].Java.name
+  },
+  methods:{
+    // storeからscore
+    getBSkillScores(){
+      const skillBScore=this.$store.getters.backScore
+      this.data.datasets[0].data=skillBScore
+    },
+    // storeからname
+    getBSkillName(){
+      const skillBName=this.$store.getters.backName
+      this.data.labels=skillBName
+    }
   }
+
+//   mounted(){
+
+//     this.getbackScores()
+//     this.renderChart(this.data, this.options)
+//       // this.$store.dispatch('updateSkillScores');
+//       // this.$store.getters.getSkillScores[0].Java.name
+//   },
+//   methods :{
+//     getbackScores(){
+//       const backScores = this.$store.getters.getSkillScores
+//       this.data.datasets[0].data = backScores
+
+// //    console.log($store.state.skillScores);
+//     // const Java = this.$store.getters.getSkillScores[0].Java.name;
+//       // console.log(this.$store.getters.getSkillScores[0])
+//     },
+
+//   }
 }
 </script>

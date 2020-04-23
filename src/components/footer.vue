@@ -9,8 +9,10 @@
     >
       <img
         id="footerScroll"
+        v-smooth-scroll="{ duration: 2000, offset: 0 }"
         alt="top"
         src="../assets/up3.png"
+        @click="handleScroll()"
       >
     </a>
     <div class="footerCopyright">
@@ -25,6 +27,16 @@
 export default {
   name: "Footer"
 }
+/*aaa  data(){
+    visible = 'false' // 表示・非表示判定を格納
+  },
+  methods: {
+    handleScroll() {
+      // スクロール値が151以上の場合にvisibleをtrue、そうでない場合にfalseにする
+      this.visible = window.pageYOffset > 150;
+    }
+  }*/
+
 </script>
 
 <style scoped>

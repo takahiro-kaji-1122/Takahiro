@@ -8,13 +8,31 @@
       <p />
       <p>どう実現させていくのかは、シアトルがどう成長していくかにかかっていると感じているので、その中でシアトルのValueを体現できるように頑張っていきたいと思っています。</p>
     </div>
+    <!-- <div>{{ score }}</div>
+    <input
+      type="checkbox"
+      @click="getScore()"
+    > -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "Vision"
+  name: "Vision",
+  computed:{
+    // score(){
+    //   return this.$store.getters.getSkillScores
+    // }
+  },
+//    mounted(){
+//     // getScore(){
+//    this.$store.dispatch('updateSkillScores');
+// //    console.log($store.state.skillScores);
+//     // await console.log(this.$store.getters.getSkillScores)
+//     // },
+//   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -34,26 +52,17 @@ export default {
   font-size: 18pt;
   width: 300px;
   font-weight: bold;
-  text-shadow: 2px 3px 9px #3d4666;
+  text-shadow: 2px 2px 2px #3c40506b;
   padding: 0 0 5px 0;
   border-bottom: 2px solid #20879f;
-}
-
-.hr1 {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #154bc05d;
-  margin: 0 0;
-  padding: 0;
 }
 
 .visionExplain {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
-  widows: 300px;
   padding: 10px 20px 5px 20px;
+  margin: 0 0 0 0;
   line-height: 1.4em;
   word-break: normal;
 }
