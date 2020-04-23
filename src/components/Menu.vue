@@ -17,34 +17,26 @@
         <ul class="drawerMenuSection">
           <li class="drawerMenuItem">
             <a
-              v-smooth-scroll
               class="drawerMenuItemLink"
-              href="#Main"
-              @click="toggle()"
+              @click="clickScrollMein();toggle()"
             >Main</a>
           </li>
           <li class="drawerMenuItem">
             <a
-              v-smooth-scroll
               class="drawerMenuItemLink"
-              href="#About"
-              @click="toggle()"
+              @click="clickScrollAbout();toggle()"
             >About</a>
           </li>
           <li class="drawerMenuItem">
             <a
-              v-smooth-scroll
               class="drawerMenuItemLink"
-              href="#Skill"
-              @click="toggle()"
+              @click="clickScrollSkill();toggle()"
             >Skill</a>
           </li>
           <li class="drawerMenuItem">
             <a
-              v-smooth-scroll
               class="drawerMenuItemLink"
-              href="#Vision"
-              @click="toggle()"
+              @click="clickScrollVision();toggle()"
             >Vision</a>
           </li>
         </ul>
@@ -67,6 +59,47 @@ export default {
     }
   },
   methods: {
+        clickScrollMain () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Main'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    },
+    clickScrollAbout () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#About'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    },
+    clickScrollSkill () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Skill'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    },
+    clickScrollVision () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#Vision'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    },
+
     toggle() {
       this.open = !this.open
 

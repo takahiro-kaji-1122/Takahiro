@@ -5,9 +5,11 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 import store from './store'
-
+import smoothScroll from 'vue-smoothscroll'
 
 Vue.config.productionTip = false
+/* スクロール */
+Vue.use(smoothScroll)
 
 new Vue({
   store,
