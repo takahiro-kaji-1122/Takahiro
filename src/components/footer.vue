@@ -4,12 +4,10 @@
   >
     <!--https://cleysense.com/blog/smooth-scroll-with-vuejs/-->
     <a
-      v-smooth-scroll
       href="#Main"
     >
       <img
         id="footerScroll"
-        v-smooth-scroll="{ duration: 2000, offset: 0 }"
         alt="top"
         src="../assets/up3.png"
         @click="handleScroll()"
