@@ -84,7 +84,9 @@ export default new Vuex.Store({ //ここに実装を書く
       const graphScore = [];
       // this.skillsを一時変数のitemsに参照コピーする<なし
       // axios.getを用いてデプロイ済のfunctionにアクセスする
-      const res = await axios.get('https://us-central1-portfolio-12283.cloudfunctions.net/skills')
+      // const res = await axios.get('https://us-central1-portfolio-12283.cloudfunctions.net/skills')
+      const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skills';
+      const res = await axios.get(functionsUrl);
       //resにScoreを配列でブッコム？
       /*多分これの変わり
         then((response) => {
