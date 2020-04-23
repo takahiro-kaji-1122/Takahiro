@@ -18,7 +18,12 @@
     </div>
     <!--一回フッター無効化    <div id="Footer">
       <Footer />
-    </div> -->
+    </div>-->
+    <!-- test
+    ボタン切り替え
+      <div id="app">
+      {{ message }}
+</div>
     test -->
   </div>
 </template>
