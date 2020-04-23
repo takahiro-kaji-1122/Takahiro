@@ -24,7 +24,7 @@
       <div id="app">
       {{ message }}
 </div>
-    test -->
+     test -->
   </div>
 </template>
 
