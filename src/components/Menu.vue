@@ -34,10 +34,11 @@
           >
             Main
           </li>
-          <li class="drawerMenuItem">
-            "
+          <li
+            class="drawerMenuItem"
             @click="clickScrollAbout();toggle()"
-            >About
+          >
+            About
           </li>
           <li
             class="drawerMenuItem"
