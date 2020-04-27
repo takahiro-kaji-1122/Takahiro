@@ -4,15 +4,13 @@
   >
     <!--https://cleysense.com/blog/smooth-scroll-with-vuejs/-->
     <a
-      v-smooth-scroll
       href="#Main"
     >
       <img
         id="footerScroll"
-        v-smooth-scroll="{ duration: 2000, offset: 0 }"
         alt="top"
         src="../assets/up3.png"
-        @click="handleScroll()"
+        @click="clickSmoothScroll()"
       >
     </a>
     <div class="footerCopyright">
@@ -25,17 +23,20 @@
 ,
 <script scoped>
 export default {
-  name: "Footer"
-}
-/*aaa  data(){
-    visible = 'false' // 表示・非表示判定を格納
-  },
-  methods: {
-    handleScroll() {
-      // スクロール値が151以上の場合にvisibleをtrue、そうでない場合にfalseにする
-      this.visible = window.pageYOffset > 150;
+  name: "Footer",
+  methods:{
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#app'),
+        400,
+        null,
+        null,
+        'y'
+      )
     }
-  }*/
+  }
+}
 
 </script>
 
