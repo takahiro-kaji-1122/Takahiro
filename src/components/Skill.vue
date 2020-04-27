@@ -47,6 +47,7 @@
         class="offFrontend"
         :class="{ onFrontend: isFrontActive }"
       >
+        <!-- こいつらvuexから取ってくる -->
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
@@ -132,9 +133,9 @@ export default {
     setCurrentChart(chart) {
       this.currentChart = chart;
       console.log(this.currentChart);
-      console.log(this.currentChart=='Frontend');
-      console.log(this.currentChart=='Backend');
-      console.log(this.currentChart=='DevOps');
+      // console.log(this.currentChart=='Frontend');
+      // console.log(this.currentChart=='Backend');
+      // console.log(this.currentChart=='DevOps');
 
 /*いらなかったswich            switch (this.currentChart) {
               case "Frontend":
