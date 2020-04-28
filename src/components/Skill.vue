@@ -93,7 +93,8 @@
       >
         <SkillChartDevOps />
       </div>
-    </div><!--試し-->
+    </div>
+    <div id="jpVision" />
   </div>
 </template>
 
@@ -187,7 +188,7 @@ export default {
   font-size: 12pt;
   line-height: 1.4em;
   word-break: normal;
-  padding: 8px 20px 5px 20px;
+  padding: 15px 20px 5px 20px;
 }
 
 .gitHubLabel {
@@ -297,6 +298,10 @@ export default {
   text-align: center;
   width: 300px;
   height: 300px;
+}
+
+#jpVision {
+  padding: 20px 0 20px 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');

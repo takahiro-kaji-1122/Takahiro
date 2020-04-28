@@ -14,6 +14,7 @@
       <p>ITと心理学の分野と掛け合わせたサービスをつくてみたいと思ってます💭</p>
     </div>
     <br>
+    <div id="jpSkill" />
   </div>
 </template>
 
@@ -58,8 +59,13 @@ export default {
   line-height: 1.4em;
   word-break: normal;
   padding: 8px 20px 0 20px;
-  margin: 0 2px 0 2px;
+  margin: 10px 2px 0 2px;
 }
+
+#jpSkill {
+  padding: 20px 0 20px 0;
+}
+
 
 /* .aboutExplain p{
   margin: 1.1em;
