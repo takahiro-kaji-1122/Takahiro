@@ -61,13 +61,12 @@
         v-for="bName in backNames" :key="bName"
       > -->
       <ul
-        v-for="bName in backNames"
-        :key="bName"
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
         <!--v-forで書き直す
         <li>{{bName}}</li> -->
+        <li>Java</li>
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
