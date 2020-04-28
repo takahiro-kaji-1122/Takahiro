@@ -54,11 +54,20 @@
         <li>SCSS</li>
         <li>Vue</li>
       </ul><br>
+      <!--v-forで書き直す
+       <ul
+        class="offBackend"
+        :class="{ onBackend: isBackActive }"
+        v-for="bName in backNames" :key="bName"
+      > -->
       <ul
+        v-for="bName in backNames"
+        :key="bName"
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
-        <li>Java</li>
+        <!--v-forで書き直す
+        <li>{{bName}}</li> -->
         <li>Ruby</li>
         <li>RubyOnRails</li>
         <li>MySQL</li>
@@ -113,9 +122,16 @@ export default {
   },
   data () {
     return {
-      currentChart: 'Frontend'
+      currentChart: 'Frontend',
+      //v-forで書き直す backNames : []
     }
-},
+  },
+  //v-forで書き直す mounted:{
+  //     getBSkillName(){
+  //     const skillBName=this.$store.getters.backName
+  //     this.data.backNames=skillBName
+  //     }
+  // },
   computed: {
     isFrontActive() {
       return this.currentChart=='Frontend';
