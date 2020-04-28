@@ -54,10 +54,18 @@
         <li>SCSS</li>
         <li>Vue</li>
       </ul><br>
+      <!--v-forで書き直す
+       <ul
+        class="offBackend"
+        :class="{ onBackend: isBackActive }"
+        v-for="bName in backNames" :key="bName"
+      > -->
       <ul
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
+        <!--v-forで書き直す
+        <li>{{bName}}</li> -->
         <li>Java</li>
         <li>Ruby</li>
         <li>RubyOnRails</li>
@@ -93,7 +101,8 @@
       >
         <SkillChartDevOps />
       </div>
-    </div><!--試し-->
+    </div>
+    <div id="jpVision" />
   </div>
 </template>
 
@@ -112,9 +121,16 @@ export default {
   },
   data () {
     return {
-      currentChart: 'Frontend'
+      currentChart: 'Frontend',
+      //v-forで書き直す backNames : []
     }
-},
+  },
+  //v-forで書き直す mounted:{
+  //     getBSkillName(){
+  //     const skillBName=this.$store.getters.backName
+  //     this.data.backNames=skillBName
+  //     }
+  // },
   computed: {
     isFrontActive() {
       return this.currentChart=='Frontend';
@@ -187,7 +203,7 @@ export default {
   font-size: 12pt;
   line-height: 1.4em;
   word-break: normal;
-  padding: 8px 20px 5px 20px;
+  padding: 15px 20px 5px 20px;
 }
 
 .gitHubLabel {
@@ -297,6 +313,10 @@ export default {
   text-align: center;
   width: 300px;
   height: 300px;
+}
+
+#jpVision {
+  padding: 20px 0 20px 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');

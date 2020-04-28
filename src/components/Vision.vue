@@ -15,6 +15,7 @@
       type="checkbox"
       @click="getScore()"
     > -->
+    <div id="jpFooter" />
   </div>
 </template>
 
@@ -64,9 +65,13 @@ export default {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
   padding: 10px 20px 5px 20px;
-  margin: 0 0 0 0;
+  margin: 10px 0 0 0;
   line-height: 1.4em;
   word-break: normal;
+}
+
+#jpFooter {
+  padding: 20px 0 20px 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');

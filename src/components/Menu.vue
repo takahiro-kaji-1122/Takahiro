@@ -34,10 +34,11 @@
           >
             Main
           </li>
-          <li class="drawerMenuItem">
-            "
+          <li
+            class="drawerMenuItem"
             @click="clickScrollAbout();toggle()"
-            >About
+          >
+            About
           </li>
           <li
             class="drawerMenuItem"
@@ -95,7 +96,7 @@ export default {
     clickScrollAbout () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#About'),
+        document.querySelector('#jpAbout'),
         400,
         null,
         null,
@@ -105,7 +106,7 @@ export default {
     clickScrollSkill () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#Skill'),
+        document.querySelector('#jpSkill'),
         400,
         null,
         null,
@@ -115,7 +116,7 @@ export default {
     clickScrollVision () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#Vision'),
+        document.querySelector('#jpVision'),
         400,
         null,
         null,
@@ -177,11 +178,13 @@ export default {
 }
 
 .drawerMenuItem {
-  color: #fff;
+  color: #707070;
   width: 100%;
-  height: 40px;
+  height: 100%;
+  border-bottom: 2px solid #707070;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
+  padding: 20px 20px 0 0;
 }
 
 /* .drawerMenuItemLink {
