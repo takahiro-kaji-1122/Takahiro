@@ -11,6 +11,7 @@
       alt="人"
       src="../assets/takahiro2.png"
     >
+    <div id="jpAbout" />
   </div>
 </template>
 
@@ -56,7 +57,11 @@ export default {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  padding: 5px 0 10px 0;
+  padding: 10px 0 0 0;
+}
+
+#jpAbout {
+  padding: 20px 0 20px 0;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');

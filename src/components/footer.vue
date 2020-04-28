@@ -3,9 +3,7 @@
     class="footerSection"
   >
     <!--https://cleysense.com/blog/smooth-scroll-with-vuejs/-->
-    <a
-      href="#Main"
-    >
+    <a>
       <img
         id="footerScroll"
         alt="top"
@@ -28,7 +26,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#app'),
+        document.querySelector('#Main'),
         400,
         null,
         null,

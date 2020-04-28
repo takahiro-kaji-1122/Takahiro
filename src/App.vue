@@ -34,7 +34,7 @@ import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
-import Footer from './components/Footer.vue'
+import Footer from './components/footer.vue'
 
 
 export default {
@@ -104,39 +104,4 @@ var app = new Vue({
   text-align: center;
 }
 
-button {
-  border: none;
-  border-radius: 5px;
-  background: #00a4ff;
-  padding: 8px 14px;
-  font-size: 15px;
-  color: #fff;
-}
-
-#banner-message.cl1 {
-  background: #0084ff;
-  color: #fff;
-  margin-top: 40px;
-  width: 200px;
-}
-
-#banner-message.cl2 {
-  background: #ff8400;
-  color: #fff;
-  margin-top: 40px;
-  width: 200px;
-}
-
-#banner-message.alt button {
-  background: #fff;
-  color: #000;
-}
-
-#btn2 {
-  background: #f97;
-}
-
-#reset {
-  background: gray;
-}
 </style>
