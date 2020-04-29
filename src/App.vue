@@ -10,7 +10,11 @@
     <div id="About">
       <About />
     </div>
-    <div id="Skill">
+    <!-- storeの読み込みごにひょうじするように -->
+    <div
+      v-if="loaded"
+      id="Skill"
+    >
       <Skill />
     </div>
     <div id="Vision">
@@ -47,9 +51,14 @@ export default {
     Vision,
     Footer
   },
+  computed:{
+    loaded(){
+      return this.$store.state.loaded
+    }
+  },
   mounted(){
     this.$store.dispatch('updateSkillScores');
-  },
+  }
 /*data() {
     return {
       skills: []

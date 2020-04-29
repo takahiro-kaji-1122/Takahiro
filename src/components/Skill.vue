@@ -47,39 +47,35 @@
         class="offFrontend"
         :class="{ onFrontend: isFrontActive }"
       >
-        <!-- こいつらvuexから取ってくる -->
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>SCSS</li>
-        <li>Vue</li>
-      </ul><br>
-      <!--v-forで書き直す
-       <ul
-        class="offBackend"
-        :class="{ onBackend: isBackActive }"
-        v-for="bName in backNames" :key="bName"
-      > -->
+        <li
+          v-for="fName in frontNames"
+          :key="fName"
+        >
+          {{ fName }}
+        </li>
+      </ul>
+      <!-- v-forで書き直す -->
       <ul
         class="offBackend"
         :class="{ onBackend: isBackActive }"
       >
-        <!--v-forで書き直す
-        <li>{{bName}}</li> -->
-        <li>Java</li>
-        <li>Ruby</li>
-        <li>RubyOnRails</li>
-        <li>MySQL</li>
-      </ul><br>
+        <li
+          v-for="bName in backNames"
+          :key="bName"
+        >
+          {{ bName }}
+        </li>
+      </ul>
       <ul
         class="offDevOps"
         :class="{ onDevOps: isDevOpsActive }"
       >
-        <li>Linux</li>
-        <li>Node</li>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Firebase</li>
+        <li
+          v-for="dName in devNames"
+          :key="dName"
+        >
+          {{ dName }}
+        </li>
       </ul>
     </div>
     <div class="skillGraph">
@@ -122,15 +118,13 @@ export default {
   data () {
     return {
       currentChart: 'Frontend',
-      //v-forで書き直す backNames : []
+      // v-forで書き直す
+      frontNames :[],
+      backNames :[],
+      devNames :[],
+
     }
   },
-  //v-forで書き直す mounted:{
-  //     getBSkillName(){
-  //     const skillBName=this.$store.getters.backName
-  //     this.data.backNames=skillBName
-  //     }
-  // },
   computed: {
     isFrontActive() {
       return this.currentChart=='Frontend';
@@ -145,29 +139,28 @@ export default {
       return this.$store.state.loaded
     }
   },
+  mounted (){
+    this.getFSkillName()
+    this.getBSkillName()
+    this.getDSkillName()
+  },
+  // v-forで書き直す
   methods: {
     setCurrentChart(chart) {
       this.currentChart = chart;
-      console.log(this.currentChart);
-      // console.log(this.currentChart=='Frontend');
-      // console.log(this.currentChart=='Backend');
-      // console.log(this.currentChart=='DevOps');
-
-/*いらなかったswich            switch (this.currentChart) {
-              case "Frontend":
-        console.log(`${this.currentChart}Frontendye!`);
-        return this.currentChart = 'chart';
-        break;
-          case "Backend":
-        console.log(`${this.currentChart}Backendye!`);
-                return this.currentChart = 'chart';
-
-        break;
-
-              case "DevOps":
-        console.log(`${this.currentChart}DevOpsye!`);
-        break;
-      }*/
+    },
+    // v-for:tate値を返す
+    getFSkillName(){
+      const skillFName=this.$store.getters.frontName;
+      this.frontNames=skillFName;
+    },
+    getBSkillName(){
+      const skillBName=this.$store.getters.backName;
+      this.backNames=skillBName;
+    },
+    getDSkillName(){
+      const skillDName=this.$store.getters.devName;
+      this.devNames=skillDName;
     }
   }
 }

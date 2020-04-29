@@ -87,11 +87,7 @@ export default new Vuex.Store({ //ここに実装を書く
       // const res = await axios.get('https://us-central1-portfolio-12283.cloudfunctions.net/skills')
       const functionsUrl = 'https://us-central1-' + process.env.VUE_APP_FUNCTIONS_API + '.cloudfunctions.net/skills';
       const res = await axios.get(functionsUrl);
-      //resにScoreを配列でブッコム？
-      /*多分これの変わり
-        then((response) => {
-        response.data.forEach((skill) {
-        取得したデータを１件ずつ配列に設定する*/
+        // 取得したデータを１件ずつ配列に設定する
       res.data.forEach((Score) => {
         graphScore.push(Score);
       });
